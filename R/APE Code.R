@@ -69,13 +69,13 @@ list.files(here::here("data"))
 #houston <- st_read("houston.shp")
 #plot(houston)
 
-data2020ZCTA <- read.csv("PLACES__ZCTA_Data__GIS_Friendly_Format___2022_release.csv")
-data2020city <- read.csv("PLACES__Place_Data__GIS_Friendly_Format___2022_release.csv")
-data2020tract <- read.csv("PLACES__Census_Tract_Data__GIS_Friendly_Format___2022_release.csv")
-data2019ZCTA <- read.csv("PLACES__ZCTA_Data__GIS_Friendly_Format___2021_release.csv")
-data2019city <- read.csv("PLACES__Place_Data__GIS_Friendly_Format___2021_release.csv")
-data2019tract <- read.csv("PLACES__Census_Tract_Data__GIS_Friendly_Format___2021_release.csv")
-EJI <- read.csv("Virginia EJI.csv")
+data2020ZCTA <- read.csv(here::here("Data","PLACES__ZCTA_Data__GIS_Friendly_Format___2022_release.csv"))
+data2020city <- read.csv(here::here("Data","PLACES__Place_Data__GIS_Friendly_Format___2022_release.csv"))
+data2020tract <- read.csv(here::here("Data","PLACES__Census_Tract_Data__GIS_Friendly_Format___2022_release.csv"))
+data2019ZCTA <- read.csv(here::here("Data","PLACES__ZCTA_Data__GIS_Friendly_Format___2021_release.csv"))
+data2019city <- read.csv(here::here("Data","PLACES__Place_Data__GIS_Friendly_Format___2021_release.csv"))
+data2019tract <- read.csv(here::here("Data","PLACES__Census_Tract_Data__GIS_Friendly_Format___2021_release.csv"))
+EJI <- read.csv(here::here("Data","Virginia EJI.csv"))
 EJICAV <- subset(EJI, GEOID %in% c("51740211600",
                                    "51740211700",
                                    "51740212500",
@@ -85,7 +85,7 @@ EJICAV <- subset(EJI, GEOID %in% c("51740211600",
                                    "51740212801",
                                    "51740212802",
                                    "51740212900"))
-VAZips <- read.csv("va-zip-codes-data.csv")
+VAZips <- read.csv(here::here("Data","va-zip-codes-data.csv"))
 
 #data2020 <- subset(data2020, Measure %in% c("Chronic obstructive pulmonary disease among adults aged >=18 years",
  #                                   "Coronary heart disease among adults aged >=18 years",
